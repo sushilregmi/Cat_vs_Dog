@@ -1,30 +1,52 @@
-1. According to our research, a machine learning algorithm has an accuracy of 80%. However, when we applied the algorithm to practical use, the accuracy was below the expected accuracy. Describe two or more causes to this.
+1. According to our research, a machine learning algorithm has an accuracy of 80%. However, when we applied the algorithm to practical use,
+ the accuracy was below the expected accuracy. Describe two or more causes to this.
 
-One of the main causes is the problem of overfitting. Overfitting refers to condition where the model performs on the training data too well. The model learns the detail and noise in the training data to the extent it negatively impacts the performance of the model on new data. It negatively impacts the model’s ability to generalize.
+One of the main causes is the problem of overfitting. Overfitting refers to condition where the model performs on the training data too well.
+ The model learns the detail and noise in the training data to the extent it negatively impacts the performance of the model on new data.
+ It negatively impacts the model’s ability to generalize.
 
-It is possible that the training and test datasets are an unrepresentative sample of data from the domain. The sample size may be too small that it does not effectively cover the cases observed in the broader domain. Also, the training and test samples come from the same source and have no significant variance, so the metrics like accuracy obtained may not be the strong indicators of the model performance.
+It is possible that the training and test datasets are an unrepresentative sample of data from the domain. The sample size may be too small 
+that it does not effectively cover the cases observed in the broader domain. Also, the training and test samples come from the same source 
+and have no significant variance, so the metrics like accuracy obtained may not be the strong indicators of the model performance.
 
 
 2. Please suggest and describe two industry applicable Deep Learning projects you would carry out using a dataset of aerial images.
-One of the industry applicable Deep learning projects that I would like to do which uses aerial images is the mapping of roads. With maps being useful day by day, it will be one of the crucial tasks to focus on. Having the comprehensive dataset of pictures (satellite, drone image) of land with road topology, the task will be to build a deep learning system which can accurately extract the existing road topology.
+One of the industry applicable Deep learning projects that I would like to do which uses aerial images is the mapping of roads. With maps 
+becoming more and more necessary every day, it will be one of the most important things to concentrate on. The aim will be to construct a
+ deep learning system that can accurately extract the current road topology using a comprehensive dataset of photos (satellite, drone image) 
+of land with road structure.
 
-Another deep learning projects using the dataset of aerial images is geofencing. The UAVs with the intelligent system built within it can be used for the critical operations for military, industrial surveillance and more. The system can be also used in building the intrusion detection system.
+Another deep learning projects using the dataset of aerial images is geofencing. The UAVs with the intelligent system built within it can be 
+used for the critical operations for military, industrial surveillance and more. The system can be also used in building the intrusion detection 
+system.
 
 
 
 
-3. You have a large data set consisting of high-resolution aerial orthophotos. Your objective is to create an API that detects small objects within an orthophoto (e.g. Trees, Cars, People, etc). Please explain how you would create a Deep Learning Pipeline by elaborating on how you would approach the following steps. (No more than 300 words in total)
+3. You have a large data set consisting of high-resolution aerial orthophotos. Your objective is to create an API that detects small objects 
+within an orthophoto (e.g. Trees, Cars, People, etc). Please explain how you would create a Deep Learning Pipeline by elaborating on how you 
+would approach the following steps. (No more than 300 words in total)
+
 
 a. Data Preprocessing / Labeling
-Since the objects to be detected are occupying less pixels within the aerial images, the resizing of the images will be the better option which will also help in annotation phase. Because the datasets contain small objects, the tiling process can be done to improve the accuracy. This will take the image and chop it into sections and make it smaller, so we can infer faster. After performing certain transformation on image, the objects within the image must be annotated using the labeling tool.
+Because the objects to be detected take up less pixels in aerial photographs, resizing the images will be a better alternative, which will
+ also aid in the annotation step. The tiling procedure can be used to increase the accuracy of the model because they comprise little objects. 
+ This will divide up the image into chunks and make it smaller, allowing us to infer faster. The objects inside the image must be annotated
+ using the labeling tool after undergoing specific transformations.
 
 b. Model Selection
-Keeping detection accuracy, model size and detection time, it is better to choose YOLO model for real-time object detection on aerial images. We can improve the performance of this model by slightly modifying the network of the model. The backbone part and detection part of the model can be modified using different module which will ultimately improve the performance of small object detection problem.
+Keeping detection accuracy, model size and detection time in mind, it is better to choose YOLO model for real-time object detection on aerial images. 
+We can improve the performance of this model by slightly modifying the network of the model. The backbone part and detection part of the model
+can be modified using different module which will ultimately improve the performance of small object detection problem.
 c. Model training
-Since it will be a tedious task to train the model fully from scratch, we will use transfer learning which will save both resources and time.  We can use the pretrained weights file which are trained on the datasets like COCO, AID, DOTA datasets. The configurations of the model and the training process can be changed according to the requirements we need to train the object detection model.
+Since it will be a tedious task to train the model fully from scratch, we will use transfer learning which will save both resources and time. 
+ We can use the pretrained weights file which are trained on the datasets like COCO, AID, DOTA datasets. The configurations of the model and
+ the training process can be changed according to the requirements we need to train the object detection model.
 
 d. Model Optimization / Hyperparameter Tuning
-The model can be optimized using Yolo- tiny network and the performance can be compared with the Yolo model. The hyperparameters like early stopping, epochs, learning rate, batch size, weight decay can be tuned using GridSearchCV and RandomSearchCV.
+The model can be optimized using Yolo- tiny network and the performance can be compared with the Yolo model. The hyperparameters like early 
+stopping, epochs, learning rate, batch size, weight decay can be tuned using GridSearchCV and RandomSearchCV.
 
 e. Model Hosting/ Deployment/Management
-Since we are using the Yolo / Yolo-tiny model for object detection it can be easily deployed on the low-end devices. Moreover, the model can be deployed on the cloud and by building the API, we can use it in our web app or mobile app.
+Since we are using the Yolo / Yolo-tiny model for object detection it can be easily deployed on the low-end devices. Moreover, the model can 
+be deployed on the cloud and by building the API, we can use it in our web app or mobile app.
